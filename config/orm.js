@@ -12,13 +12,16 @@ var orm = {
             }
             cb(result);
           });
-    }//,
-    /*
-    insertOne: function(tableName, columns, vals) {
-        var queryString = "INSERT INTO " + tableName + " (" + columns.toString() + ") " + "VALUES (" + vals + ") ";
-    
-        console.log(queryString);
-    }*/
+    },
+    insertOne: function(tableName, columns, values, cb) {
+        var queryString = "INSERT INTO " + tableName + " (" + columns.toString() + ") " + "VALUES (" + values + ");";
+        connection.query(queryString, function(err, result) {
+            if (err) {
+              throw err;
+            }
+            cb(result);
+          });
+    }
     //, 
     //updateOne: function() {
         //var queryString = "";

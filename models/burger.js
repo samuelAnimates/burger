@@ -8,6 +8,11 @@ var burger = {
             cb(res);
         });
     },
+    insertOne: function(columns, values, cb){
+        orm.insertOne("burgers", columns, values, function(res){
+            cb(res);
+        });
+    }
 }
 
 // Export the burger database functions for use by the controller (burgers_controller.js)
