@@ -3,8 +3,11 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
+//access environmental variables for username, password, host
+require('dotenv').config({path: 'dotenv.env'});
+
 // Sets up the express app
-var PORT = 3006; //process.env.PORT || 
+var PORT = process.env.PORT || 3006;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
