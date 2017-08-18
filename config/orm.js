@@ -21,11 +21,17 @@ var orm = {
             }
             cb(result);
           });
+    }, 
+    updateOne: function(tableName, column, value, condition, cb) {
+        //UPDATE burgers SET devoured = 1 WHERE id = 3;
+        var queryString = "UPDATE " + tableName + " SET " + column + " = " + value + " WHERE " + condition + ";";
+        connection.query(queryString, function(err, result) {
+            if (err) {
+              throw err;
+            }
+            cb(result);
+        });
     }
-    //, 
-    //updateOne: function() {
-        //var queryString = "";
-   // }
 
 };
 
