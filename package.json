@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/smendez92/burger.git"
   },
+  "engines": {
+    "node": "6.10.1"
+  },
   "author": "Samuel R. Mendez",
   "license": "MIT",
   "bugs": {
@@ -23,5 +26,6 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",
     "mysql": "^2.14.1"
-  }
+  },
+  "scripts": { "start" : "node server.js" }
 }
